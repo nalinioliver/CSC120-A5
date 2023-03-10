@@ -63,7 +63,7 @@ public class Engine {
             System.out.println("The remaining fuel is" + current);
         } 
         else {
-            throw new RuntimeException("Fuel is at 0!");
+            throw new RuntimeException("Cannot remove any more fuel!");
         }
 
     }
