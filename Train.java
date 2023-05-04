@@ -36,8 +36,11 @@ public class Train {
         return this.engine;
     }
 
+    /**
+     * Creates a new train called Tank with a fuel type of steam, a fuel capacity of 40, 7 train cars, and a passsenger capacity of 80
+     */
     public static void main(String[] args) {
-        Train TankEngine = new Train(FuelType.STEAM, 20, 7, 80);
+        Train Tank = new Train(FuelType.STEAM, 40, 7, 80);
     }
 
 }

@@ -76,6 +76,9 @@ public class Car {
 
     }
 
+    /**
+     * Creates a new car called Volvo with a capacity of 5 
+     */
     public static void main(String[] args) {
         Car Volvo = new Car(5);
     }

@@ -77,8 +77,11 @@ public class Engine {
 
     }
 
+    /**
+     * Creates a new engine called myEngine with a fuel type of steam, a current fuel level of 20, and a max fuel level of 40 
+     */
     public static void main(String[] args) {
-        Engine myEngine = new Engine(FuelType.STEAM, 4, 20);
+        Engine myEngine = new Engine(FuelType.STEAM, 20, 40);
     }
 
 
