@@ -1,7 +1,7 @@
 /**
  * Creates the engine, including the fuel type, the current fuel level, the max fuel level, and the ability to "lose" fuel in incriments of 10
- * @author: Nalini Oliver
- * Resources: CSC 120 TA hours (Wednesday and Thursday), Lecture slides on Moodle 
+ * @author Nalini Oliver
+ * Resources CSC 120 TA hours (Wednesday and Thursday), Lecture slides on Moodle 
  */
 public class Engine {
     /**
@@ -18,10 +18,17 @@ public class Engine {
      */
     private double max;
 
-    
+    /**
+     * Will return the fuel type 
+     * @return the fuel type 
+     */
+    public FuelType getfuel() {
+        return this.f;
+    }
+
     /**
      * Will return the current fuel level of the train
-     * @return: current train fuel level 
+     * @return the current train fuel level 
      */
     public double getcurrent() {
         return this.current;
@@ -29,7 +36,7 @@ public class Engine {
 
     /**
      * Will return the maximum possible fuel level 
-     * @return max: maximum possible fuel level that the train has 
+     * @return maximum possible fuel level that the train has 
      */
     public double getmax() {
         return this.max;
@@ -37,18 +44,20 @@ public class Engine {
 
     /**
      * Assigns the attributes based on how we defined the attributes listed above
-     * @param current: current fuel level of the train
-     * @param max: maximum possible fuel level of the train
+     * @param f is the fuel type of the train
+     * @param current is the current fuel level of the train
+     * @param max is the maximum possible fuel level of the train
      */
-    public Engine(double current, double max){
+    public Engine(FuelType f, double current, double max){
+        this.f = f;
         this.current = current;
         this.max = max;
     } 
     
     /**
      * Will put the train's fuel level back to the maximum possible value 
-     * @param current: the current fuel level of the train 
-     * @param max: the maximum possible fuel level of the train 
+     * @param current is the current fuel level of the train 
+     * @param max is the maximum possible fuel level of the train 
      */
     public void refuel(double current, double max) {
         this.max = current;
@@ -66,6 +75,10 @@ public class Engine {
             throw new RuntimeException("Cannot remove any more fuel!");
         }
 
+    }
+
+    public static void main(String[] args) {
+        Engine myEngine = new Engine(FuelType.STEAM, 4, 20);
     }
 
 
